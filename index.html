@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> CraftMyCV Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="login.css">
+    
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+.container{
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height:500px;
+    width: 90%;    
+    padding: 0 10px;
+    border-radius: 5px;
+}
+h1{
+    text-align: center;
+    color: #001a16;
+    margin-bottom: 15px;
+    border-bottom: 2px solid black;
+    transition: border 3s ease, font-size 3s ease;
+}
+h1:hover{
+    border-bottom: 2px solid #00ffd5;
+    font-size: 34px;
+}
+.welcome{
+    margin: 5px 0;
+    font-weight: 300;
+    padding: 5px 20px;
+}
+.login-para{
+    padding: 5px 20px;
+}
+.mycv{
+    color: #00ffd5;
+}
+.intro{
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+input{
+    width: 100%;
+    padding: 20px 10px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    
+}
+input::placeholder{
+    padding: 0 12px;
+    font-size: 16px;
+}
+button{
+    width: 100%;
+    background: #00ffd5;
+    margin: 10px 0;
+    border: unset;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px 10px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background 3s ease, font-size 3s ease;
+}
+button:hover{
+    background: #aaffdd;
+    font-size: 20px;
+}
+
+
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    background: black;
+    color: white;
+    width: 100%;
+    padding: 20px;
+}
+.footer .footer-para{
+    text-align: center;
+    
+}
+
+@media(min-width:768px){
+    body {
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100rem;
+    }
+    .container {
+        height: 900px;
+        font-size: 30px;    
+    }
+    h1{
+        margin-bottom: 50px;
+        font-size: 50px;
+    }
+    h1:hover{
+        font-size: 60px;
+    }
+    input{
+       border: 2px solid #ccc;
+        width: 100%;
+        font-size: 40px;
+    }
+    .footer{
+        padding: 50px;
+    }
+    p{
+        font-size: 35px;
+    }
+    input::placeholder{
+        font-size: 24px;
+    }
+    button{
+        font-size: 40px;
+        
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Craft<span class="mycv">MyCV</span></h1>
+        <p class="welcome">Welcome to <span class="intro">CraftMyCV</span> — your personal resume-building assistant. Whether you're starting your career or seeking your next big role, we help you craft clean, professional CVs that make an impact.</p>
+  <p class="login-para"> Log in to continue building a future you're proud of.
+   </p>
+        <form>
+        <input type="email" placeholder="Enter Email address" >
+        <input type="password" placeholder="Enter Password">
+        <button type="submit">Login</button>
+        </form>
+    </div>
+    <div class="footer">
+        <p class="footer-para">CraftMyCV &copy; 2025</p>
+    </div>
+    <script src="login.js">
+        window.addEventListener('resize', () => {
+  const footer = document.querySelector('.footer');
+  if (window.innerHeight < 500) {
+    footer.style.display = 'none'; // keyboard likely open
+  } else {
+    footer.style.display = 'block'; // keyboard closed
+  }
+});
+    </script>
+</body>
+</html>
